@@ -18,6 +18,8 @@ class SearchVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         configureLogoImageView()
+        configureTextField()
+        configureCallToActionButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,7 +41,7 @@ class SearchVC: UIViewController {
             logoImageView.heightAnchor.constraint(equalToConstant: 200),
             logoImageView.widthAnchor.constraint(equalToConstant: 200)
         ])
-        
+    }
         
         func configureTextField() {
             view.addSubview(usernameTextField)
@@ -48,13 +50,21 @@ class SearchVC: UIViewController {
                 usernameTextField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 48),
                 usernameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
                 usernameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
-                usernameTextField.heightAnchor.constraint(equalToConstant: 200)
+                usernameTextField.heightAnchor.constraint(equalToConstant: 50)
             ])
         }
         
         
-        func configureCalllToActionButton() {
-            
-        }
+    func configureCallToActionButton() {
+        // the equivilent to dragging a button onto storybord
+        view.addSubview(callToActionButton)
+        
+        NSLayoutConstraint.activate([
+            callToActionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
+            callToActionButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
+            callToActionButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
+            callToActionButton.heightAnchor.constraint(equalToConstant: 50)
+        ])
+    
     }
 }
