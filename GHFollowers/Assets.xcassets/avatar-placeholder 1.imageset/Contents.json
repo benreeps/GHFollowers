@@ -11,11 +11,11 @@
           "value" : "dark"
         }
       ],
-      "filename" : "github-mark-white.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "avatar-placeholder@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -26,10 +26,12 @@
           "value" : "dark"
         }
       ],
+      "filename" : "avatar-placeholder-dark@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "avatar-placeholder@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     },
@@ -40,6 +42,7 @@
           "value" : "dark"
         }
       ],
+      "filename" : "avatar-placeholder-dark@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
