@@ -9,21 +9,15 @@ import UIKit
 
 class GFAlertVC: UIViewController {
 
+    let containerView = UIView()
+    let titleLabel = GFTittleLabel(textAlignment: .center, fontSize: 20)
+    let messageLabel = GFBodyLabel(textAlignment: .center)
+    let actionButton = GFButton(backgroundColor: .systemPink, title: "Ok")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
