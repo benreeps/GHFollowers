@@ -20,6 +20,7 @@
 		26CC547F29B4DC9500F8FB44 /* GFAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC547E29B4DC9500F8FB44 /* GFAlertVC.swift */; };
 		26CC548129B4F86200F8FB44 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC548029B4F86200F8FB44 /* UIViewController+Ext.swift */; };
 		26CC548829B53E9C00F8FB44 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC548729B53E9C00F8FB44 /* Follower.swift */; };
+		26CC548A29B5430100F8FB44 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC548929B5430100F8FB44 /* User.swift */; };
 		26D3BBB029B28A870083A3D9 /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D3BBAF29B28A870083A3D9 /* FollowerListVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		26CC547E29B4DC9500F8FB44 /* GFAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertVC.swift; sourceTree = "<group>"; };
 		26CC548029B4F86200F8FB44 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		26CC548729B53E9C00F8FB44 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
+		26CC548929B5430100F8FB44 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		26D3BBAF29B28A870083A3D9 /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				26CC548729B53E9C00F8FB44 /* Follower.swift */,
+				26CC548929B5430100F8FB44 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26CC548A29B5430100F8FB44 /* User.swift in Sources */,
 				26C5204F29B03CD2000691B6 /* GFTextField.swift in Sources */,
 				26BE972F29B3F7DA00682CD2 /* GFTittleLabel.swift in Sources */,
 				26CC345C29AEEDD40041C7B3 /* SearchVC.swift in Sources */,
