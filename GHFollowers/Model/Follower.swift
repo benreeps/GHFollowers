@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Followers: Codable {
+struct Follower: Codable {
     var login: String
     // login is not going to be null bc github will not allow this edge case 
     var avatarUrl: String
