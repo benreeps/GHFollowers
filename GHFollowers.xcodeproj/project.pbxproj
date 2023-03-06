@@ -74,6 +74,7 @@
 		26CC344629AED9CC0041C7B3 /* GHFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				26CC345529AED9D10041C7B3 /* Info.plist */,
 				26CC548629B53E8300F8FB44 /* Model */,
 				26CC548529B52B3400F8FB44 /* Support */,
 				26CC548429B52AD200F8FB44 /* Extension */,
@@ -120,7 +121,6 @@
 				26CC344929AED9CC0041C7B3 /* SceneDelegate.swift */,
 				26CC345029AED9D10041C7B3 /* Assets.xcassets */,
 				26CC345229AED9D10041C7B3 /* LaunchScreen.storyboard */,
-				26CC345529AED9D10041C7B3 /* Info.plist */,
 			);
 			path = Support;
 			sourceTree = "<group>";
