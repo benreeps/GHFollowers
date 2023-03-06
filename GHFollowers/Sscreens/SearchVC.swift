@@ -27,7 +27,7 @@ class SearchVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         // Use viewWillAppear bc viewDidLoad only gets called the first time the view loads. It would not get called if user were to go to followrs then back unless using viewWillAppear
         super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     
