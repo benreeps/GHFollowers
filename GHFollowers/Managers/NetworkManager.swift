@@ -52,5 +52,5 @@ class NetworkManager {
         
         task.resume()
     }
-    // completed/ completion handleer/ closure are all interchangable terms
+    // completed/ completion handeler/ closure are all interchangable terms
 }
