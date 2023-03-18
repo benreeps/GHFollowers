@@ -5,13 +5,14 @@
 //  Created by Benjamin Reeps on 3/5/23.
 //
 
-import Foundation
+import UIKit
 
 class NetworkManager {
     static let shared    = NetworkManager()
     // static means that every network manager will have this var on it
-    let baseURL          = "https://api.github.com/users/"
+    private let baseURL  = "https://api.github.com/users/"
     // find base url on github rest api/ overview/ resources in the REST API/ schema
+    let cache            = NSCache<NSString, UIImage>()
     
     private init() {}
     

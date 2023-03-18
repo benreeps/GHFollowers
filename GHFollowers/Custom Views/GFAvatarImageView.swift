@@ -9,6 +9,7 @@ import UIKit
 
 class GFAvatarImageView: UIImageView {
     
+    let cache            = NetworkManager.shared.cache
     let placeholderImage = UIImage(named: "avatar-placeholder" )!
 
     override init(frame: CGRect) {
@@ -30,6 +31,15 @@ class GFAvatarImageView: UIImageView {
     
     
     func downloadImage(from urlString: String) {
+        
+        let cacheKey = NSString(string: urlString)
+        
+        if let image = cache.object(forKey: cacheKey) {
+            self.image = image
+            return
+            // return here bc we don't want to proceed with the network call if we have the cached image 
+        }
+            
         guard let url = URL(string: urlString) else {return}
         
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
