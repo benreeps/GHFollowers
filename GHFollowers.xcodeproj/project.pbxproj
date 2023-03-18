@@ -77,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				26CC344629AED9CC0041C7B3 /* GHFollowers */,
+				26CC548529B52B3400F8FB44 /* Support */,
+				26CC345529AED9D10041C7B3 /* Info.plist */,
 				26CC344529AED9CC0041C7B3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,24 +96,22 @@
 			children = (
 				26E457DA29B6D271007D4EC0 /* Utilities */,
 				26CC548B29B5871400F8FB44 /* Managers */,
-				26CC345529AED9D10041C7B3 /* Info.plist */,
 				26CC548629B53E8300F8FB44 /* Model */,
-				26CC548529B52B3400F8FB44 /* Support */,
 				26CC548429B52AD200F8FB44 /* Extension */,
 				26CC548329B52AA800F8FB44 /* Custom Views */,
-				26CC548229B52A7400F8FB44 /* Sscreens */,
+				26CC548229B52A7400F8FB44 /* Screens */,
 			);
 			path = GHFollowers;
 			sourceTree = "<group>";
 		};
-		26CC548229B52A7400F8FB44 /* Sscreens */ = {
+		26CC548229B52A7400F8FB44 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				26CC345D29AEEEAF0041C7B3 /* FavoriteListVC.swift */,
 				26D3BBAF29B28A870083A3D9 /* FollowerListVC.swift */,
 				26CC345B29AEEDD40041C7B3 /* SearchVC.swift */,
 			);
-			path = Sscreens;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		26CC548329B52AA800F8FB44 /* Custom Views */ = {
