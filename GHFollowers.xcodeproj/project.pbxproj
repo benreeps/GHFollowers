@@ -78,7 +78,6 @@
 			children = (
 				26CC344629AED9CC0041C7B3 /* GHFollowers */,
 				26CC548529B52B3400F8FB44 /* Support */,
-				26CC345529AED9D10041C7B3 /* Info.plist */,
 				26CC344529AED9CC0041C7B3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,6 +93,7 @@
 		26CC344629AED9CC0041C7B3 /* GHFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				26CC345529AED9D10041C7B3 /* Info.plist */,
 				26E457DA29B6D271007D4EC0 /* Utilities */,
 				26CC548B29B5871400F8FB44 /* Managers */,
 				26CC548629B53E8300F8FB44 /* Model */,
