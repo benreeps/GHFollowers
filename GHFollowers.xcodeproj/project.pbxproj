@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		264130E429C76C8600E3982D /* GFEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264130E329C76C8600E3982D /* GFEmptyStateView.swift */; };
+		264130E629C7F55E00E3982D /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264130E529C7F55E00E3982D /* UserInfoVC.swift */; };
 		2654220629BBBCB100C0F370 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2654220529BBBCB000C0F370 /* UIHelper.swift */; };
 		26BE972F29B3F7DA00682CD2 /* GFTittleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BE972E29B3F7DA00682CD2 /* GFTittleLabel.swift */; };
 		26BE973129B3FD2600682CD2 /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BE973029B3FD2600682CD2 /* GFBodyLabel.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		264130E329C76C8600E3982D /* GFEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyStateView.swift; sourceTree = "<group>"; };
+		264130E529C7F55E00E3982D /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
 		2654220529BBBCB000C0F370 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		26BE972E29B3F7DA00682CD2 /* GFTittleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTittleLabel.swift; sourceTree = "<group>"; };
 		26BE973029B3FD2600682CD2 /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				26CC345D29AEEEAF0041C7B3 /* FavoriteListVC.swift */,
 				26D3BBAF29B28A870083A3D9 /* FollowerListVC.swift */,
 				26CC345B29AEEDD40041C7B3 /* SearchVC.swift */,
+				264130E529C7F55E00E3982D /* UserInfoVC.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				26CC344829AED9CC0041C7B3 /* AppDelegate.swift in Sources */,
 				26CC344A29AED9CC0041C7B3 /* SceneDelegate.swift in Sources */,
 				26D3BBB029B28A870083A3D9 /* FollowerListVC.swift in Sources */,
+				264130E629C7F55E00E3982D /* UserInfoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
