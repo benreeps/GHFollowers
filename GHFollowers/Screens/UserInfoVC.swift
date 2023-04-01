@@ -18,7 +18,6 @@ class UserInfoVC: UIViewController {
         view.backgroundColor = .systemBackground
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
         navigationItem.rightBarButtonItem = doneButton
-        
         layoutUI()
         
         NetworkManager.shared.getUserInfo(for: username) { [weak self] result in
@@ -40,7 +39,7 @@ class UserInfoVC: UIViewController {
     func layoutUI() {
         view.addSubview(headerView)
         headerView.translatesAutoresizingMaskIntoConstraints = false
-        headerView.backgroundColor = .systemPink
+       // headerView.backgroundColor = .systemPink
         
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
