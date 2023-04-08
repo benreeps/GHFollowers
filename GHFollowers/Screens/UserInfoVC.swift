@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol UserInfoVCDelegate: AnyObject {
+    func didTapGitHubProfile()
+    func didTapGetFollowers()
+}
+
 class UserInfoVC: UIViewController {
     
     let headerView = UIView()
@@ -16,6 +21,7 @@ class UserInfoVC: UIViewController {
     var itemViews: [UIView] = []
     
     var username: String!
+    var delegate: UserInfoVCDelegate!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,17 +43,26 @@ class UserInfoVC: UIViewController {
             
             switch result {
             case .success(let user):
-                DispatchQueue.main.async {
-                    self.add(childVC: GFUserInfoHeaderVC(user: user), to: self.headerView)
-                    self.add(childVC: GFRepoItemVC(user: user), to: self.itemViewOne)
-                    self.add(childVC: GFFollowerItemVC(user: user), to: self.itemViewTwo)
-                    self.dateLabel.text = "Github since \(user.createdAt.convertToDisplayFormat())"
-                }
+                DispatchQueue.main.async { self.configureUIElements(with: user) }
                 
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
             }
         }
+    }
+    
+    func configureUIElements(with user: User) {
+        let repoItemVC           = GFRepoItemVC(user: user)
+        repoItemVC.delegate      = self
+        
+        let followerItemVC       = GFFollowerItemVC(user: user)
+        followerItemVC.delegate  = self
+        
+        
+        self.add(childVC: GFUserInfoHeaderVC(user: user), to: self.headerView)
+        self.add(childVC: GFRepoItemVC(user: user), to: self.itemViewOne)
+        self.add(childVC: GFFollowerItemVC(user: user), to: self.itemViewTwo)
+        self.dateLabel.text = "Github since \(user.createdAt.convertToDisplayFormat())"
     }
     
     func layoutUI() {
@@ -64,15 +79,7 @@ class UserInfoVC: UIViewController {
                 itemView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding)
             ])
         }
-        /*
-        view.addSubview(headerView)
-        view.addSubview(itemViewOne)
-        view.addSubview(itemViewTwo)
-        
-        headerView.translatesAutoresizingMaskIntoConstraints = false
-        itemViewOne.translatesAutoresizingMaskIntoConstraints = false
-        itemViewTwo.translatesAutoresizingMaskIntoConstraints = false
-        */
+       
         
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -103,4 +110,17 @@ class UserInfoVC: UIViewController {
         dismiss(animated: true)
     }
 
+}
+
+
+extension UserInfoVC: UserInfoVCDelegate {
+    
+    func didTapGitHubProfile() {
+        // Show safari view controller
+    }
+    
+    func didTapGetFollowers() {
+        // dismissvc
+        // tell follower list screen the new user
+    }
 }
