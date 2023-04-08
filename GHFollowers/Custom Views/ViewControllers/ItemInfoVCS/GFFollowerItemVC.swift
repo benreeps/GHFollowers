@@ -5,7 +5,7 @@
 //  Created by Benjamin Reeps on 4/2/23.
 //
 
-import Foundation
+import UIKit
 
 class GFFollowerItemVC: GFItemInfoVC {
     override func viewDidLoad() {

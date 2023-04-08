@@ -7,11 +7,11 @@
 
 import UIKit
 
+enum ItemInfoType {
+    case repos, gists, followers, following
+}
+
 class GFItemInfoView: UIView {
-    
-    enum ItemInfoType {
-        case repos, gists, followers, following
-    }
 
     let symbolImageView = UIImageView()
     let titleLabel      = GFTitleLabel(textAlignment: .left, fontSize: 14)
@@ -20,6 +20,7 @@ class GFItemInfoView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+       configure()
     }
     
     
@@ -31,7 +32,7 @@ class GFItemInfoView: UIView {
     private func configure() {
         addSubview(symbolImageView)
         addSubview(countLabel)
-        addSubview(countLabel)
+        addSubview(titleLabel)
         
         symbolImageView.translatesAutoresizingMaskIntoConstraints = false
         symbolImageView.contentMode = .scaleAspectFill
