@@ -62,7 +62,7 @@ class UserInfoVC: UIViewController {
                 itemView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding)
             ])
         }
-        
+        /*
         view.addSubview(headerView)
         view.addSubview(itemViewOne)
         view.addSubview(itemViewTwo)
@@ -70,7 +70,7 @@ class UserInfoVC: UIViewController {
         headerView.translatesAutoresizingMaskIntoConstraints = false
         itemViewOne.translatesAutoresizingMaskIntoConstraints = false
         itemViewTwo.translatesAutoresizingMaskIntoConstraints = false
-        
+        */
         
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),

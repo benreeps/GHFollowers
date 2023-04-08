@@ -24,7 +24,7 @@ class GFButton: UIButton {
     
     convenience init(backgroundColor: UIColor, title: String) {
         self.init(frame: .zero)
-        set(backgroundColor: backgroundColor, title: title)
+      //  set(backgroundColor: backgroundColor, title: title)
         // Init with a frame of zero bc we will do this with auto layout constraints
         self.backgroundColor = backgroundColor
         // self means thsi GFButton
