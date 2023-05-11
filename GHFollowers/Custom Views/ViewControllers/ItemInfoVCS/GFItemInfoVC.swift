@@ -15,7 +15,7 @@ class GFItemInfoVC: UIViewController {
     let actionButton    = GFButton()
     
     var user: User!
-    weak var delegate: UserInfoVCDelegate?
+    weak var delegate: UserInfoVCDelegate!
     // weak to avoid retain cycle 
     
     init(user: User) {
