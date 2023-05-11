@@ -32,7 +32,7 @@ class NetworkManager {
             }
             
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                completed(.failure(.unableToComplete))
+                completed(.failure(.invalidResponse))
                 return
             }
             
@@ -71,7 +71,7 @@ class NetworkManager {
             }
             
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                completed(.failure(.unableToComplete))
+                completed(.failure(.invalidResponse))
                 return
             }
             
@@ -90,7 +90,6 @@ class NetworkManager {
 //                completed(nil, "The data received from the server is invalid. Please try again.")
             }
         }
-        
         task.resume()
     }
 }
