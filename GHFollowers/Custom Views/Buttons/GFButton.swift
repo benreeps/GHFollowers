@@ -22,15 +22,13 @@ class GFButton: UIButton {
     }
     
     
-     init(backgroundColor: UIColor, title: String) {
-        super.init(frame: .zero)
+     convenience init(backgroundColor: UIColor, title: String) {
+        self.init(frame: .zero)
       //  set(backgroundColor: backgroundColor, title: title)
         // Init with a frame of zero bc we will do this with auto layout constraints
         self.backgroundColor = backgroundColor
         // self means thsi GFButton
         self.setTitle(title, for: .normal)
-        // settign title to whatever we passs in
-        configure()
     }
     
     
