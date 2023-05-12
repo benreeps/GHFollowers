@@ -23,7 +23,7 @@ class FavoritesListVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        // ViewDidLoad will only get called once while viewWillAppear will get called every time the user taps back to favorites 
+        // ViewDidLoad will only get called once while viewWillAppear will get called every time the user taps back to favorites
         getFavorites()
     }
     
@@ -83,5 +83,14 @@ extension FavoritesListVC: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let favorite    = favorites[indexPath.row]
+        let destVC      = FollowerListVC()
+        destVC.username = favorite.login
+        destVC.title    = favorite.login
+        
+        navigationController?.pushViewController(destVC, animated: true)
+    }
     
 }
