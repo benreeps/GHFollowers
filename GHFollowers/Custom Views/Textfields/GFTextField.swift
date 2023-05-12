@@ -39,7 +39,7 @@ class GFTextField: UITextField {
         // do not want autocorrect for usernames
         returnKeyType             = .go
         // This only customizes what the return key on the keyboard says. In order to activate it we have to the search vc will need to conform to the UITextfield delegate 
-        
+        clearButtonMode           = .whileEditing
         placeholder               = "Enter a username"
     }
    
