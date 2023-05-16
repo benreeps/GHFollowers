@@ -54,8 +54,8 @@ class FavoritesListVC: GFDataLoadingVC {
                 if favorites.isEmpty {
                     self.showEmptyStateView(with: "No favorites?\nAdd one on the follower screen.", in: self.view)
                 } else {
-                    self.favorites = favorites
                     DispatchQueue.main.async {
+                        self.favorites = favorites
                         self.tableView.reloadData()
                         self.view.bringSubviewToFront(self.tableView)
                     }
