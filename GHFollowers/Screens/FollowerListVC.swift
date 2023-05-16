@@ -205,6 +205,7 @@ extension FollowerListVC: UISearchResultsUpdating {
             isSearching = false
             return
         }
+        
         isSearching = true
         filteredFollowers = followers.filter { $0.login.lowercased().contains(filter.lowercased()) }
         updateData(on: filteredFollowers)
@@ -218,6 +219,7 @@ extension FollowerListVC: UserInfoVCDelegate {
         self.username = username
         title         = username
         page          = 1
+        
         followers.removeAll()
         filteredFollowers.removeAll()
         collectionView.setContentOffset(.zero, animated: true)
