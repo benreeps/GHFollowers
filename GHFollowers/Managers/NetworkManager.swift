@@ -8,10 +8,9 @@
 import UIKit
 
 class NetworkManager {
+    
     static let shared    = NetworkManager()
-    // static means that every network manager will have this var on it
     private let baseURL  = "https://api.github.com/users/"
-    // find base url on github rest api/ overview/ resources in the REST API/ schema
     let cache            = NSCache<NSString, UIImage>()
     
     private init() {}
@@ -48,7 +47,6 @@ class NetworkManager {
                 completed(.success(followers))
             } catch {
                 completed(.failure(.invalidData))
-//                completed(nil, "The data received from the server is invalid. Please try again.")
             }
         }
         
@@ -88,7 +86,6 @@ class NetworkManager {
                 completed(.success(user))
             } catch {
                 completed(.failure(.invalidData))
-//                completed(nil, "The data received from the server is invalid. Please try again.")
             }
         }
         task.resume()
@@ -96,13 +93,11 @@ class NetworkManager {
     
     
     func downloadImage(from urlString: String, completed: @escaping (UIImage?) -> Void) {
-        
         let cacheKey = NSString(string: urlString)
         
         if let image = cache.object(forKey: cacheKey) {
             completed(image)
             return
-            // return here bc we don't want to proceed with the network call if we have the cached image
         }
         
         guard let url = URL(string: urlString) else {
@@ -111,6 +106,7 @@ class NetworkManager {
         }
         
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
+            
             guard let self = self,
                   error == nil,
                 let response = response as? HTTPURLResponse,response.statusCode == 200,
@@ -121,7 +117,6 @@ class NetworkManager {
                 }
                     
             self.cache.setObject(image, forKey: cacheKey)
-           
             completed(image)
         }
         

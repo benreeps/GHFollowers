@@ -60,9 +60,11 @@ class UserInfoVC: GFDataLoadingVC {
         self.dateLabel.text = "Github since \(user.createdAt.convertToMonthYearFormat())"
     }
     
+    
     func layoutUI() {
         let padding: CGFloat = 20
         let itemHeight: CGFloat = 140
+        
         itemViews = [headerView, itemViewOne, itemViewTwo, dateLabel]
         
         for itemView in itemViews {
@@ -74,7 +76,6 @@ class UserInfoVC: GFDataLoadingVC {
                 itemView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding)
             ])
         }
-       
         
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -90,7 +91,6 @@ class UserInfoVC: GFDataLoadingVC {
             dateLabel.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
-    
         
     
     func add(childVC: UIViewController, to containerView: UIView) {
