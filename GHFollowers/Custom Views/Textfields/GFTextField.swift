@@ -14,6 +14,7 @@ class GFTextField: UITextField {
         configure()
     }
     
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -25,7 +26,6 @@ class GFTextField: UITextField {
         layer.cornerRadius        = 10
         layer.borderWidth         = 2
         layer.borderColor         = UIColor.systemGray4.cgColor
-        // Using symantic colors app to decided on Gray4
         
         textColor                 = .label
         tintColor                 = .label
@@ -36,11 +36,8 @@ class GFTextField: UITextField {
         
         backgroundColor           = .tertiarySystemBackground
         autocorrectionType        = .no
-        // do not want autocorrect for usernames
         returnKeyType             = .go
-        // This only customizes what the return key on the keyboard says. In order to activate it we have to the search vc will need to conform to the UITextfield delegate 
         clearButtonMode           = .whileEditing
         placeholder               = "Enter a username"
     }
-   
 }

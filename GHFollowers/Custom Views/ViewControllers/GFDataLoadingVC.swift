@@ -26,7 +26,6 @@ class GFDataLoadingVC: UIViewController {
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            //important that constraints are tied to the containerView bc activity indicator is a subview of containter view 
             activityIndicator.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
             activityIndicator.centerXAnchor.constraint(equalTo: containerView.centerXAnchor)
         ])
@@ -48,5 +47,4 @@ class GFDataLoadingVC: UIViewController {
         emptyStateView.frame = view.bounds
         view.addSubview(emptyStateView)
     }
-
 }

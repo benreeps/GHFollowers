@@ -30,6 +30,7 @@ class FollowerCell: UICollectionViewCell {
         usernameLabel.text = follower.login
     }
     
+    
     private func configure() {
         addSubviews(avatarImageView, usernameLabel)
         
@@ -47,7 +48,5 @@ class FollowerCell: UICollectionViewCell {
             usernameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding),
             usernameLabel.heightAnchor.constraint(equalToConstant: 20)
         ])
-    }
-                                     
-                                     
+    }                           
 }

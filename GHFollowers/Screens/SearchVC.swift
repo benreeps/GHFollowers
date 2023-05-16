@@ -13,7 +13,7 @@ class SearchVC: UIViewController {
     let usernameTextField   = GFTextField()
     let callToActionButton  = GFButton(backgroundColor: .systemGreen, title: "Get Followers")
     var logoImageViewTopConstraint: NSLayoutConstraint!
-    // generic button used incase name changes
+    
     var isUserNameEntered: Bool { return !usernameTextField.text!.isEmpty}
     
     override func viewDidLoad() {
@@ -27,7 +27,6 @@ class SearchVC: UIViewController {
     }
     
     
-    // Use viewWillAppear bc viewDidLoad only gets called the first time the view loads. It would not get called if user were to go to followrs then back unless using viewWillAppear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         usernameTextField.text = ""
@@ -36,7 +35,6 @@ class SearchVC: UIViewController {
     
     
     func createDismissKeyboardTapGesture() {
-        // .endEditing causes the view, or one of its embedded text fields, to resign the first responder status. When view is resinged the keyboard will be dismissed
         let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
     }
@@ -58,7 +56,6 @@ class SearchVC: UIViewController {
     func configureLogoImageView() {
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
         logoImageView.image = Images.ghLogo
-        // "stringley typed" would be a typo in gh-logo that would casue crash
         
         let topConstraintConstant: CGFloat = DeviceTypes.isiPhoneSE || DeviceTypes.isiPhone8Zoomed ? 20 : 80
         
@@ -72,6 +69,7 @@ class SearchVC: UIViewController {
         ])
     }
         
+    
         func configureTextField() {
             usernameTextField.delegate = self
             
@@ -85,7 +83,6 @@ class SearchVC: UIViewController {
         
         
     func configureCallToActionButton() {
-        // the equivilent to dragging a button onto storybord
         callToActionButton.addTarget(self, action: #selector(pushFollowerListVC), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
@@ -94,7 +91,6 @@ class SearchVC: UIViewController {
             callToActionButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
             callToActionButton.heightAnchor.constraint(equalToConstant: 50)
         ])
-    
     }
 }
 
